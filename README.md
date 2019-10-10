@@ -1,4 +1,4 @@
-Ileri programlama
+İşler
 
 
 
