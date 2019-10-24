@@ -129,6 +129,7 @@ function showStd(id) {
 }
 function studentsIn(code) {
 	
+   let c="";
     code = code.toUpperCase();
 	//console.log(code)
     let a = [];
@@ -137,12 +138,13 @@ function studentsIn(code) {
 	//
 	if(ata.id==code){
 	
-	report(ata.tarih+"\n"+ata.saat);
-	
+	report(ata.tarih);
+	report(ata.saat);
 	for (let a of ata.list){
-	report(a);
-	}
+	c=c+" "+a;
 	
+	}
+	report(c);
 	}
 	
 	}
