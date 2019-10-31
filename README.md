@@ -7,7 +7,7 @@
 
 [Sınıf işi 2.1 ısı değeri değişimi](https://eemmresen.github.io/Ileriprogramlama/cw2_1.html)
 
-[Sınıf işi 4 Promise & fetch()](https://eemmresen.github.io/Ileriprogramlama/CW4.html)CW5/EloquentJS.html
+[Sınıf işi 4 Promise & fetch()](https://eemmresen.github.io/Ileriprogramlama/CW4.html)
 
 
 [Sınıf işi 5](https://eemmresen.github.io/Ileriprogramlama/CW5/EloquentJS.html)
