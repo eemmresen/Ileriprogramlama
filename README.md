@@ -11,3 +11,5 @@
 
 
 [Sınıf işi 5](https://eemmresen.github.io/Ileriprogramlama/CW5_1/CW5/EloquentJS.html)
+
+[Sınıf işi 6](https://eemmresen.github.io/Ileriprogramlama/cw6.html)
