@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width">
+    <title>CW6</title>
+<script>
+"use strict";
+
+	let array = [];
+	let rmt;
+function fileSelect(t) { //target is the button
+	array = []
+	var files = t.files;
+	for(let asd of files){
+		let reader = new FileReader();    
+
+	reader.onload = function(evt) { //text
+         array.push([reader.result,asd.name])
+      };
+	  	reader.readAsText(asd);
+
+    console.log("Filename " + asd.name);
+	console.log(typeof files);
+	
+	
+	}
+
+}
+
+function fetchURL(){
+ fetch(url.value)
+      .then(r =>  r.text()).then(result => rmt = result) 
+
+}
+
+function compareText(){
+	
+	let str = "tüm dosyalar farklı";
+	
+	for(let a of array){
+		if(a[0] == rmt){
+			console.log("var.");
+			str =  a[1] + "  içeriği aynı ";
+		}
+	}
+	out.innerText = array.length + " kontrol edilenler " + str; 
+
+}
+
+
+
+</script><style>
+  .thumb {
+     width: 400px;
+     border: 1px solid #000;
+     margin: 10px 5px 0 0;
+  }
+</style></head>
+
+
+
+
+
+<body>
+<h2 id="title">Read local file</h2>
+
+<input type="file" id="button" onchange="fileSelect(this)" multiple="multiple">
+</p>
+<input type=text id=url value="https://maeyler.github.io/JS/data/Students.txt">
+
+<input type=button value="remote" onClick="fetchURL()">
+</p>
+<input type=button value="compare" onClick="compareText()">
+
+<output id="msg">Bir dosya seçin  / </output>
+<output id="out"></output>
+</p>
+
+
+
+
+<script>
+    title.innerText = document.title;
+    sample.innerText = fileSelect.toString();
+</script>
+
+
+
+</body></html>
