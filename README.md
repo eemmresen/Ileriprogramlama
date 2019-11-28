@@ -23,4 +23,4 @@
 
 [Sınıf işi 8](https://eemmresen.github.io/Ileriprogramlama/CW8.html)  formatlayamadım
 
-https://eemmresen.github.io/Ileriprogramlama/CW5_1/PWA/index.html
+https://eemmresen.github.io/Ileriprogramlama/PWA/index.html
