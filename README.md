@@ -21,6 +21,6 @@
 
 [Sınıf işi 7](https://eemmresen.github.io/Ileriprogramlama/CW7_son/Timing.html)
 
-[Sınıf işi 8](https://eemmresen.github.io/Ileriprogramlama/CW8_son/cw8.html)  
+[Sınıf işi 8](https://eemmresen.github.io/Ileriprogramlama/CW8_emre.html)  
 
 [Sınıf işi 9](https://eemmresen.github.io/Ileriprogramlama/cw9.html)
