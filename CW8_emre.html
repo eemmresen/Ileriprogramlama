@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Text Input</title>
+	</head>
+	<body>
+	
+		<table id="table" border="1">
+             <tr>
+                <th>Name</th>
+                <th>Diam</th>
+                <th>Mass</th>
+		<th>Radius</th>
+		<th>Period</th>
+
+            </tr>
+		</table>
+		<style>
+		table {
+				border:solid red; 
+				padding: 10px 50px; 
+				text-align: center;
+		}
+		</style>
+	</body>
+
+
+	
+    
+    <script>
+		table = document.getElementById("table");
+		function addRows(st) {
+		 for(var i = 0; i < st.length; i++)
+				   {
+				   var newRow = table.insertRow(table.length);
+					   for(var j = 0; j < st[i].length; j++)
+					   {
+						   var cell = newRow.insertCell(j);
+						   
+						   cell.innerHTML = st[i][j];
+					   }
+				   }
+		}
+		
+				 var cw8 = [["Mercury","0.382","0.06","0.40","0.24"],
+                         ["Venus","0.949","0.82","0.72","0.62"],
+                         ["Earth","1.000","1.00","1.00","1.00"],
+                         ["Mars","0.532","0.11","1.52","1.88"],
+                         ["Jupiter","11.209","317.80","5.20","11.86"],
+			 ["Saturn","9.449","95.20","9.54","29.46"],
+			 ["Uranus","4.007","14.60","19.22","84.01"],
+			 ["Neptune","3.883","17.20","30.06","164.80"],	
+]
+			 addRows(cw8);
+
+
+
+
+    </script>
+<pre id="out">[<br>  {<br>    "Name": "Mercury",<br>    "Diam": 0.382,<br>    "Mass": 0.06,<br>    "Radius": 0.4,<br>    "Period": 0.24<br>  },<br>  {<br>    "Name": "Venus",<br>    "Diam": 0.949,<br>    "Mass": 0.82,<br>    "Radius": 0.72,<br>    "Period": 0.62<br>  },<br>  {<br>    "Name": "Earth",<br>    "Diam": 1,<br>    "Mass": 1,<br>    "Radius": 1,<br>    "Period": 1<br>  },<br>  {<br>    "Name": "Mars",<br>    "Diam": 0.532,<br>    "Mass": 0.11,<br>    "Radius": 1.52,<br>    "Period": 1.88<br>  },<br>  {<br>    "Name": "Jupiter",<br>    "Diam": 11.209,<br>    "Mass": 317.8,<br>    "Radius": 5.2,<br>    "Period": 11.86<br>  },<br>  {<br>    "Name": "Saturn",<br>    "Diam": 9.449,<br>    "Mass": 95.2,<br>    "Radius": 9.54,<br>    "Period": 29.46<br>  },<br>  {<br>    "Name": "Uranus",<br>    "Diam": 4.007,<br>    "Mass": 14.6,<br>    "Radius": 19.22,<br>    "Period": 84.01<br>  },<br>  {<br>    "Name": "Neptune",<br>    "Diam": 3.883,<br>    "Mass": 17.2,<br>    "Radius": 30.06,<br>    "Period": 164.8<br>  }<br>]</pre>
+	<script>
+	</script>
+
+
+</html>
