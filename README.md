@@ -24,3 +24,12 @@
 [Sınıf işi 8](https://eemmresen.github.io/Ileriprogramlama/CW8_emre.html)  
 
 [Sınıf işi 9](https://eemmresen.github.io/Ileriprogramlama/cw9.html)
+
+
+
+
+
+## Ev İşler
+
+[Ev işi 2](https://eemmresen.github.io/Ileriprogramlama/HW2/databeans.html)
+
