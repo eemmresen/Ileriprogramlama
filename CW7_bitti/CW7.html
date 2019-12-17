@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <script src="Database.js"></script>
-    <title>CW7</title>
+    <script src="database.js"></script>
+    <title>Set Intersection </title>
+
 <script>
 "use strict";
-const url = "https://maeyler.github.io/JS/data/"
-const array = [], set = new Set(), map = new Map();
+
+
+const url = "https://maeyler.github.io/JS/data/";
+const array = [], set = new Set();
+const myMap = new Map();
 
 function readData(file) {
     console.log("readData "+file);
@@ -21,101 +25,93 @@ function parseStudent(line) {
     let id = b[0], name = b[1], gpa = b[2];
     let std = new Student(id, name, gpa);
     let list = [];
-    for (let i=3; i<b.length; i++) 
+    for (let i=3; i<b.length; i++)
         list.push(b[i]);
     std.courses = list
     return std
 }
+
+
 function addStudents(txt) {
+
     let msg = "\nData contains ";
     msg += txt.length+" chars, ";
     let a = txt.split("\n");
-    msg += a.length+" lines \n";
+    msg += a.length+" lines <br>";
     for (let s of a) {
       let std = parseStudent(s);
-      array.push(std.id); set.add(std.name);
-      map.set(std.id,std);
+      array.push(std.id);
+     // set.add(std.name);
+      myMap.set(std.id, std);
+     // console.log(std.id + ' = ' + std);
     }
     msg += array.length+" students, "
-    msg += set.size+" distinct names"
-    out.innerText += msg
+    msg += myMap.size+" distinct names"
+    out.innerHTML += msg;
 }
 
-function randomId() {
+ let count, countArray, randomId;
 
-let count=0;
-let arrayNumber=0;
-let mapNumber=0; 
-let result="";
-let time=0;
-let timemap=0;
-let timearray=0;
-while(count!=10000)
-{
-    let randomNumber=116690000+ (Math.floor(Math.random() * 1000) + 1000);
-    randomNumber=randomNumber+"";
-    time = performance.now()
-     
-    if (map.has(randomNumber)){  mapNumber=mapNumber+1; }
-    time = performance.now() - time;
-    timemap+=time;
-    time = performance.now()
-  
-    if (array.includes(randomNumber)){ arrayNumber=arrayNumber+1;}
-    time = performance.now() - time;
-    timearray+=time;
-    count=count+1;
+function intersect3() {
+    randomId = 0, count = 0, countArray = 0;
+    let arrayTime = 0, mapTime = 0;
+
+
+    let s = new Set()
+    for (let i=0; i<10000; i++){
+    randomId = (116690070 + (Math.floor(Math.random() * 1000) + 1000)).toString();
+    let mT = performance.now()
+    if(myMap.has(randomId))
+      count++;
+
+    mapTime += performance.now() - mT
+    let aT = performance.now()
+    if(array.includes(randomId))
+       countArray++;
+    arrayTime += performance.now() - aT
+
 }
-result=arrayNumber+" adet ID eşleşdi (Array ve Map için) "+"\nArray Suresi: "+ timearray.toPrecision(3)+" msec"+"\n"+"Map Suresi: "+ timemap.toPrecision(3)+" msec";
-return result;
-}
+   console.log("randomID = " + randomId);
+   console.log("Count = " + count);
+
+   let x = "ID Numarası: " + randomId;
+   let y = "Eşleşen ID Sayısı: " + count;
+   let a = "[ARRAY] "+arrayTime.toPrecision(3)+" msec "+count+" adet ID eşleşti.";
+   let m = "[MAP] "+mapTime.toPrecision(3)+" msec "+countArray+" adet ID eşleşti."+ "\n"
+   console.log(a);
+   console.log(m);
+   output.innerText += x + "\n"+a + "\n"+m+ "\n"
+ }
+
+
+
 
 </script>
-
-
 </head>
 
 <body>
-<body>
-
-<h2 id="title" 
-">CW7</h2>
-
-<button class="button" , onClick='out.innerText+="\n\n"+randomId()'>Random Search</button>
-<p id=out >Result:</p>
+<h2 id=title></h2>
+<button id=mapArray onclick="intersect3()">Random ID search in Map and Array</button>
+<hr />
+<b>Result</b>
+<hr />
 
 <script>
     title.innerText = document.title;
-    readData("Students.txt");
+   	readData("Students.txt")
 </script>
+<p id=out></p>
+<p id=output></p>
+
 
 <hr />
-<h3>Sample code</h3>
-<pre id=sample></pre>
+<h3>Sample Code</h3>
+<pre id = sample></pre>
 <hr />
+
 <script>
-sample.innerText = randomId
+sample.innerText = intersect3
 </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
