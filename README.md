@@ -31,5 +31,6 @@
 
 ## Ev İşler
 
-[Ev işi 2](https://eemmresen.github.io/Ileriprogramlama/HW2/databeans.html)
+[Ev işi 2](https://eemmresen.github.io/Ileriprogramlama/HW2/databeans.html)/hw2/man.html
 
+[Ev işi 3](https://eemmresen.github.io/Ileriprogramlama//hw2/man.html)
