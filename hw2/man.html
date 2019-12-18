@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>character_attacking</title>
+	<style type="text/css">
+		body{
+	background-color:  black;
+}
+
+#road{
+	border-bottom: 9px dashed orange;
+
+}
+#runner{
+	background:url("hero13.png");	
+	width: 256px;
+	height: 239px;
+	animation:walk 1s steps(4) infinite;
+
+}
+@keyframes walk{
+0%{
+	background-position: 0px;
+}
+100%{
+	background-position: 2048px; 
+}
+
+}
+
+	</style>
+</head>
+<body>
+	<div id="runner"></div>
+	<div id="road"></div>
+<script type="text/javascript">
+const walk ={transform:["position:0px","position:2048px"]};
+
+const forward = {  transform: ["translateX(0)", "translateX(1100px)", "translateX(0)"]
+};
+
+var Timing = {
+  duration: 11000,
+  iterations: Infinity
+}
+
+
+document.getElementById("runner").animate(forward,Timing);
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
