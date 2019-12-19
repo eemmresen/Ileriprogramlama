@@ -36,7 +36,7 @@
 [Ev işi 3](https://eemmresen.github.io/Ileriprogramlama/hw2/man.html)
 
 
-## PROJE
+## Tasarı
 
-[Ev işi 3](https://eemmresen.github.io/Ileriprogramlama/proje/index.html)
+[Tasarı](https://eemmresen.github.io/Ileriprogramlama/proje/index.html)
 
